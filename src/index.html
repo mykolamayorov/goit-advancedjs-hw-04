@@ -2,21 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>goit-advancedjs-hw-03</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+  <body class="main">
+    <form id="search-form" class="form">
+      <input
+        type="text"
+        id="search-input"
+        class="form_input"
+        placeholder="Введіть слово для пошуку..."
+        autocomplete="off"
+      />
+      <button type="submit" class="form_btn">Пошук</button>
+    </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <ul class="gallery" id="gallery"></ul>
 
-    <load src="./partials/footer.html" />
+    <button id="load-more" class="form_btn hidden">Load more</button>
+
+    <span id="loader" class="loader hidden"></span>
 
     <script type="module" src="./main.js"></script>
   </body>

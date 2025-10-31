@@ -1,0 +1,155 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 36px auto;
+}
+
+.form {
+  margin-bottom: 32px;
+  margin-top: 32px;
+}
+
+.form_input,
+.form_btn {
+  padding: 8px 16px;
+}
+
+.form_input {
+  width: 272px;
+  margin-right: 8px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form_input:hover {
+  border-color: #000;
+}
+
+.form_input:focus {
+  border-color: #4e75ff;
+}
+
+.form_btn {
+  margin: 0;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form_btn:hover {
+  background-color: #6c8cff;
+}
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 156px;
+}
+
+.gallery_item {
+  width: calc((100% / 4) - 24px);
+  border: 1px solid #808080;
+}
+
+@media screen and (max-width: 1300px) {
+  .gallery_item {
+    width: calc((100% / 3) - 24px);
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .gallery {
+    padding: 0 78px;
+  }
+
+  .gallery_item {
+    width: calc((100% / 2) - 24px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .gallery_item {
+    width: calc(100% - 24px);
+  }
+}
+
+.gallery_item a {
+  color: #000;
+  text-decoration: none;
+  width: 100%;
+}
+
+.gallery_img {
+  width: 100%;
+  object-fit: cover;
+  height: 152px;
+}
+
+.gallery_info_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.gallery_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.gallery_info > span {
+  font-weight: 400;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #4e75ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#load-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+
+#load-more.hidden {
+  display: none;
+}
+
+#loader {
+  margin-top: 10px;
+}
